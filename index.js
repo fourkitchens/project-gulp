@@ -44,6 +44,8 @@ module.exports = function(gulp) {
   initEnvVars(projectConfig);
 
   // Include run task.
-  require('./gulp-tasks/gulp-run.js')(gulp, projectConfig);
+  require('./gulp-tasks/run.js')(gulp, projectConfig);
+  // Include drush-aliases task.
+  require('./gulp-tasks/drush-aliases.js')(gulp, projectDir);
 
 };
