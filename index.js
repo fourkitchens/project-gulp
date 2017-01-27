@@ -1,25 +1,14 @@
 /* globals require */
 
-function initEnv(projectConfig) {
-  let defaults = _.get(projectConfig, 'env.default', {});
-
-  _.forIn(projectConfig.env, function (vars, env) {
-    let envVars = _.defaultsDeep(projectConfig.env[env], defaults);
-
-    _.forIn(envVars, function (value, key) {
-      process.env['ENV_' + env.toUpperCase() + '_' + key.toUpperCase()] = value;
-    });
-  });
-}
-
 module.exports = function(gulp) {
+
   'use strict';
 
   const fs = require('fs');
   const path = require('path');
   const yaml = require('js-yaml');
   const _ = require('lodash');
-  let projectDir = path.join(__dirname, '../');
+  let projectDir = path.join(__dirname, '../../');
   let projectConfig = {};
 
   // Load config from project.yml.
@@ -33,9 +22,28 @@ module.exports = function(gulp) {
     projectConfig = _.defaultsDeep(localConfig, projectConfig);
   } catch (e) {}
 
-  initEnv(projectConfig);
+  /**
+   * Sets environment variables defined in project.yml.
+   *
+   * @param {Object} projectConfig - Project configuration defined in
+   *   project.yml.
+   */
+  function initEnvVars(projectConfig) {
+    let defaults = _.get(projectConfig, 'env.default', {});
 
-  // Include tasks.
+    _.forIn(projectConfig.env, function (vars, env) {
+      let envVars = _.defaultsDeep(projectConfig.env[env], defaults);
+
+      _.forIn(envVars, function (value, key) {
+        process.env['ENV_' + env.toUpperCase() + '_' + key.toUpperCase()] = value;
+      });
+    });
+  }
+
+  // Set environment variables.
+  initEnvVars(projectConfig);
+
+  // Include run task.
   require('./gulp-tasks/gulp-run.js')(gulp, projectConfig);
 
 };
