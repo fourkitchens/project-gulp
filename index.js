@@ -47,5 +47,7 @@ module.exports = function(gulp) {
   require('./gulp-tasks/run.js')(gulp, projectConfig);
   // Include drush-aliases task.
   require('./gulp-tasks/drush-aliases.js')(gulp, projectDir);
+  // Include phpcs task.
+  require('./gulp-tasks/phpcs.js')(gulp);
 
 };
