@@ -1,6 +1,6 @@
 /* globals require */
 
-module.exports = function(gulp) {
+module.exports = function(gulp, modules) {
 
   'use strict';
 
@@ -43,11 +43,28 @@ module.exports = function(gulp) {
   // Set environment variables.
   initEnvVars(projectConfig);
 
-  // Include run task.
-  require('./gulp-tasks/run.js')(gulp, projectConfig);
-  // Include drush-aliases task.
-  require('./gulp-tasks/drush-aliases.js')(gulp, projectDir);
-  // Include phpcs task.
-  require('./gulp-tasks/phpcs.js')(gulp);
+  // Get available task modules.
+  let modulesAvailable = fs.readdirSync(path.join(__dirname, 'gulp-tasks'));
+  let lintModulesAvailable = [];
+
+  // Loop over modules and include them.
+  modulesAvailable.forEach( function (filename) {
+    let moduleName = path.basename(filename, '.js')
+
+    // If modules array is empty or if this module is specified, include it.
+    if (!modules.length || modules.indexOf(moduleName) >= 0) {
+      // Include the task module:
+      require('./gulp-tasks/' + filename)(gulp, projectConfig, projectDir);
+
+      if (['eslint', 'phpcs'].indexOf(moduleName) >= 0) {
+        lintModulesAvailable.push(moduleName);
+      }
+    }
+  });
+
+  /**
+   * Run all linting tests.
+   */
+  gulp.task('lint', 'Run all coding standard and style checking tools.', lintModulesAvailable);
 
 };

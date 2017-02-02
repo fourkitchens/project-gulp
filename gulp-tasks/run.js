@@ -19,7 +19,7 @@
   const tap = require('gulp-tap');
   const _ = require('lodash');
 
-  module.exports = function (gulp, projectConfig) {
+  module.exports = function (gulp, projectConfig, projectDir) {
 
     function taskHelp() {
       let output = 'Syntax: gulp run -t task_name \n';

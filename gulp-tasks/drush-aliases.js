@@ -7,7 +7,7 @@
   const fs = require('fs');
   const path = require('path');
 
-  module.exports = function (gulp, projectDir) {
+  module.exports = function (gulp, projectConfig, projectDir) {
 
     gulp.task('drush-aliases', 'Setup drush aliases.', function () {
       console.log('Setting up Drush aliases...');

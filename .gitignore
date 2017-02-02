@@ -5,3 +5,5 @@ npm-debug.log*
 
 # Dependency directories
 node_modules
+composer.lock
+vendor
