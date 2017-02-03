@@ -29,14 +29,21 @@ require('project-gulp')(gulp, ['phpcs', 'eslint']);
 **phpcs**
 
 Options:
+
 `--path` or `-p`: The path in which to check coding standards
+
 `--exit` or `-e`: Exit with an error code if phpcs finds errors in a file
+
 `--install` or `-i`: Installs phpcs and other dependencies using Composer prior to testing
 
 Syntax:
+
 `gulp phpcs`
+
 `gulp phpcs --path path/to/file`
+
 `gulp phpcs --exit`
+
 `gulp phpcs --install`
 
 Runs phpcs tests on your codebase.
@@ -48,10 +55,13 @@ To override/extend the default ruleset, add a `ruleset.xml` file to your project
 **eslint**
 
 Options:
+
 `--path` or `-p`: The path in which to check coding standards
 
 Syntax:
+
 `gulp eslint`
+
 `gulp eslint -path path/to/file`
 
 Runs eslint tests on your codebase.
@@ -63,13 +73,19 @@ To override/extend the default configuration, add a `.eslintrc` file to your pro
 **run**
 
 Options:
+
 `--task` or `-t`: The name of the project task to run
+
 `--yes` or `-y`: Automatically confirm all prompts
+
 `--help` or `-h`: Print available run tasks
 
 Syntax:
+
 `gulp run -task taskname`
+
 `gulp run --yes -task taskname`
+
 `gulp run --help`
 
 Executes project run tasks defined in `project.yml` file in your project root.
@@ -79,6 +95,7 @@ See `example.project.yml`.
 **drush-aliases**
 
 Syntax:
+
 `gulp drush-aliases`
 
 Runs eslint tests on your codebase.
@@ -88,6 +105,7 @@ Runs eslint tests on your codebase.
 **lint**
 
 Syntax:
+
 `gulp eslint`
 
 Runs all available linting tasks (e.g. phpcs and eslint) enabled for your project.
