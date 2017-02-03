@@ -2,6 +2,7 @@
   "name": "project-gulp",
   "description": "Common gulp tasks useful for Four Kitchens projects.",
   "version": "1.0.0",
+  "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-help": "^1.6.1",
