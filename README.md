@@ -96,7 +96,7 @@ Syntax:
 gulp drush-aliases
 ```
 
-Runs eslint tests on your codebase.
+Attempts to symlink any drush alias files in a `drush` directory in your project root to a `.drush` directory in your home folder.
 
 ## Helper tasks
 
