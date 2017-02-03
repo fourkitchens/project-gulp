@@ -98,7 +98,7 @@
     }, {
       options: {
         path: 'The path in which to check coding standards.',
-        exit: 'Exit with an error code if phpcs finds errors.',
+        exit: 'Exit with an error code if phpcs finds errors in a file.',
         install: "Installs phpcs and other dependencies using Composer prior to testing."
       }
     });

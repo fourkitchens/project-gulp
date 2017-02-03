@@ -96,7 +96,7 @@
       }
     }, {
       options: {
-        task: 'The project task to run.',
+        task: 'The name of the project task to run.',
         yes: 'Automatically confirm all prompts.',
         help: 'Print available run tasks.'
       }

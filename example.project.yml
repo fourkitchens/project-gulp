@@ -1,0 +1,36 @@
+# Define environment variables. These variables will be available in the run
+# task commands by concatenating the keys together in an uppercase string. For
+# example, the value of env.default.alias can be used in a run task command as:
+# $ENV_DEFAULT_ALIAS
+#
+# Default variables are available in every environment but values will be
+# overridden if the variable is redefined for another environment.
+#
+# WARNING: This file is committed to the project repository. Do not put
+# sensitive information into environment variables here. Use a local.project.yml
+# or another method available to the environment that does not require
+# committing the variable values to the repo.
+env:
+  default:
+    project_name: "my-project"
+    alias: "@my-project.local"
+    database: "my-project"
+  dev:
+    alias: "@my-project.dev"
+  test:
+    alias: "@my-project.test"
+  prod:
+    alias: "@my-project.prod"
+
+# Run tasks.
+run:
+  status:
+    description: "Runs drush status."
+    commands:
+      - "drush $ENV_DEFAULT_ALIAS status"
+  updates:
+    description: "Updates the database and clears the cache."
+    confirm: "Are you sure you want to update the database?"
+    commands:
+      - "drush $ENV_DEFAULT_ALIAS updb"
+      - "drush $ENV_DEFAULT_ALIAS cr"
