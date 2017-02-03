@@ -37,14 +37,12 @@ Options:
 `--install` or `-i`: Installs phpcs and other dependencies using Composer prior to testing
 
 Syntax:
-
-`gulp phpcs`
-
-`gulp phpcs --path path/to/file`
-
-`gulp phpcs --exit`
-
-`gulp phpcs --install`
+```
+gulp phpcs
+gulp phpcs --path path/to/file
+gulp phpcs --exit
+gulp phpcs --install
+```
 
 Runs phpcs tests on your codebase.
 
@@ -59,10 +57,10 @@ Options:
 `--path` or `-p`: The path in which to check coding standards
 
 Syntax:
-
-`gulp eslint`
-
-`gulp eslint -path path/to/file`
+```
+gulp eslint
+gulp eslint -path path/to/file
+```
 
 Runs eslint tests on your codebase.
 
@@ -81,12 +79,11 @@ Options:
 `--help` or `-h`: Print available run tasks
 
 Syntax:
-
-`gulp run -task taskname`
-
-`gulp run --yes -task taskname`
-
-`gulp run --help`
+```
+gulp run -task taskname
+gulp run --yes -task taskname
+gulp run --help
+```
 
 Executes project run tasks defined in `project.yml` file in your project root.
 
@@ -95,8 +92,9 @@ See `example.project.yml`.
 **drush-aliases**
 
 Syntax:
-
-`gulp drush-aliases`
+```
+gulp drush-aliases
+```
 
 Runs eslint tests on your codebase.
 
@@ -105,7 +103,8 @@ Runs eslint tests on your codebase.
 **lint**
 
 Syntax:
-
-`gulp eslint`
+```
+gulp eslint
+```
 
 Runs all available linting tasks (e.g. phpcs and eslint) enabled for your project.
