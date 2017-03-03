@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "fs-extra": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-help": "^1.6.1",
