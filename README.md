@@ -46,7 +46,7 @@ gulp phpcs --exit
 gulp phpcs --install
 ```
 
-To ignore paths, add them to a `.phpcsignore` file in your project route.
+To ignore paths, add them to a `.phpcsignore` file in your project root.
 
 To override/extend the default ruleset, add a `ruleset.xml` file to your project root.
 
