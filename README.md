@@ -106,5 +106,5 @@ Runs all available linting tasks (e.g. phpcs and eslint) enabled for your projec
 
 Syntax:
 ```
-gulp eslint
+gulp lint
 ```
