@@ -64,7 +64,7 @@ gulp eslint
 gulp eslint -path path/to/file
 ```
 
-To ignore paths, add them to a `.eslintignore` file in your project route.
+To ignore paths, add them to a `.eslintignore` file in your project root.
 
 To override/extend the default configuration, add a `.eslintrc` file to your project root.
 
