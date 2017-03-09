@@ -84,8 +84,8 @@ Options:
 
 Syntax:
 ```
-gulp run -task taskname
-gulp run --yes -task taskname
+gulp run --task taskname
+gulp run --yes --task taskname
 gulp run --help
 ```
 
