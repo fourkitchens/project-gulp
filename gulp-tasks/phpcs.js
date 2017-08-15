@@ -109,12 +109,6 @@
     gulp.task('install-phpcs', 'Install phpcs and dependencies using Composer.', function () {
       // Run composer install inside this module.
       execSync('composer install -d ' + path.join(__dirname, '../'), {stdio: 'inherit'});
-
-      // The composer install will download Drupal core, which we don't actually
-      // need. Remove it.
-      if (fs.existsSync(path.join(__dirname, '/../vendor/drupal/core'))) {
-        fs.removeSync(path.join(__dirname, '/../vendor/drupal/core'));
-      }
     });
 
   };

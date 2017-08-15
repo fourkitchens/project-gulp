@@ -20,16 +20,10 @@
       "email": "luke@fourkitchens.com"
     }
   ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  ],
+  "repositories": [],
   "require": {},
   "require-dev": {
-    "drupal/coder": "2.7",
-    "squizlabs/PHP_CodeSniffer": "~2.0"
+    "drupal/coder": "8.2.7"
   },
   "conflict": {},
   "minimum-stability": "dev",
@@ -39,9 +33,5 @@
   "config": {
     "sort-packages": "true"
   },
-  "extra": {
-    "installer-paths": {
-      "vendor/drupal/{$name}": ["type:drupal-core", "type:drupal-module"]
-    }
-  }
+  "extra": {}
 }
