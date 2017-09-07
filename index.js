@@ -14,13 +14,17 @@ module.exports = function(gulp, modules) {
   // Load config from project.yml.
   try {
     projectConfig = yaml.safeLoad(fs.readFileSync(path.join(projectDir, 'project.yml'), 'utf8'));
-  } catch (e) {}
+  } catch (e) {
+    console.log(e.message);
+  }
 
   // Get local project config from local.project.yml and merge.
   try {
     let localConfig = yaml.safeLoad(fs.readFileSync(path.join(projectDir, 'local.project.yml'), 'utf8'));
     projectConfig = _.defaultsDeep(localConfig, projectConfig);
-  } catch (e) {}
+  } catch (e) {
+    console.log(e.message);
+  }
 
   /**
    * Sets environment variables defined in project.yml.
