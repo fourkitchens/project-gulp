@@ -37,7 +37,7 @@
   "autoload": {},
   "scripts": {},
   "config": {
-    "sort-packages": "true"
+    "sort-packages": true
   },
   "extra": {
     "installer-paths": {
