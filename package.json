@@ -6,7 +6,7 @@
   "dependencies": {
     "fs-extra": "^2.0.0",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
+    "gulp-eslint": "^4.0.2",
     "gulp-help": "^1.6.1",
     "gulp-prompt": "^0.2.0",
     "gulp-tap": "~0.1.3",
