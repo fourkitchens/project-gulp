@@ -20,7 +20,7 @@ module.exports = function(gulp, modules) {
 
   // Get local project config from local.project.yml and merge.
   try {
-    if (!fs.existsSync(path.join(projectDir, 'local.project.yml'))) {
+    if (fs.existsSync(path.join(projectDir, 'local.project.yml'))) {
       let localConfig = yaml.safeLoad(fs.readFileSync(path.join(projectDir, 'local.project.yml'), 'utf8'));
       projectConfig = _.defaultsDeep(localConfig, projectConfig);
     }
