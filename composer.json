@@ -28,8 +28,8 @@
   ],
   "require": {},
   "require-dev": {
-    "drupal/coder": "2.7",
-    "squizlabs/PHP_CodeSniffer": "~2.0"
+    "drupal/coder": "8.2.7",
+    "squizlabs/php_codesniffer": "~2.0"
   },
   "conflict": {},
   "minimum-stability": "dev",
