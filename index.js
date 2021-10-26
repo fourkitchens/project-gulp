@@ -71,6 +71,6 @@ module.exports = function(gulp, modules) {
   /**
    * Run all linting tests.
    */
-  gulp.task('lint', lintModulesAvailable);
+  //gulp.task('lint', lintModulesAvailable);
 
 };
