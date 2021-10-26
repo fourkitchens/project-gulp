@@ -9,7 +9,7 @@
 
   module.exports = function (gulp, projectConfig, projectDir) {
 
-    gulp.task('drush-aliases', 'Setup drush aliases.', function () {
+    gulp.task('drush-aliases', function () {
       console.log('Setting up Drush aliases...');
 
       let projectDrush = path.join(projectDir, 'drush');

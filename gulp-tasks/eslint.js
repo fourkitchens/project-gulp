@@ -16,7 +16,7 @@
     /**
      * Run eslint.
      */
-    gulp.task('eslint', 'Check JavaScript files for coding standards issues.', function () {
+    gulp.task('eslint', function () {
       let patterns = [
         '*.js',
         '**/*.js'

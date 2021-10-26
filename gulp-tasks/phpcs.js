@@ -21,7 +21,7 @@
     /**
      * Run phpcs.
      */
-    gulp.task('phpcs', 'Check PHP files for coding standards issues.', function () {
+    gulp.task('phpcs', function () {
       // If the install option is set, install phpcs using Composer.
       if (!fs.existsSync(path.join(__dirname, '../vendor/bin/phpcs'))) {
         if (options.hasOwnProperty('install')) {
@@ -106,7 +106,7 @@
     /**
      * Install phpcs and dependencies using Composer.
      */
-    gulp.task('install-phpcs', 'Install phpcs and dependencies using Composer.', function () {
+    gulp.task('install-phpcs', function () {
       // Run composer install inside this module.
       execSync('composer install -d ' + path.join(__dirname, '../'), {stdio: 'inherit'});
 

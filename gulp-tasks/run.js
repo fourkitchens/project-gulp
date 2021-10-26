@@ -50,7 +50,7 @@
       }
     }
 
-    gulp.task('run', 'Project run tasks.', function () {
+    gulp.task('run', function () {
       // Help option set or task option set without a task.
       if (options.hasOwnProperty('h')
         || !options.hasOwnProperty('t')
